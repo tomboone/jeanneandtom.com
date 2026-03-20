@@ -33,17 +33,16 @@ resource "azurerm_static_web_app" "this" {
   sku_size            = "Free"
 }
 
-# TODO: Uncomment after Cloudflare DNS is configured to point to the static app.
 # Azure validates DNS records exist before accepting custom domains.
-#
-# resource "azurerm_static_web_app_custom_domain" "apex" {
-#   static_web_app_id = azurerm_static_web_app.this.id
-#   domain_name       = var.domain_name
-#   validation_type   = "dns-txt-token"
-# }
-#
-# resource "azurerm_static_web_app_custom_domain" "www" {
-#   static_web_app_id = azurerm_static_web_app.this.id
-#   domain_name       = "www.${var.domain_name}"
-#   validation_type   = "cname-delegation"
-# }
+
+resource "azurerm_static_web_app_custom_domain" "apex" {
+  static_web_app_id = azurerm_static_web_app.this.id
+  domain_name       = var.domain_name
+  validation_type   = "dns-txt-token"
+}
+
+resource "azurerm_static_web_app_custom_domain" "www" {
+  static_web_app_id = azurerm_static_web_app.this.id
+  domain_name       = "www.${var.domain_name}"
+  validation_type   = "cname-delegation"
+}
