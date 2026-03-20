@@ -1,0 +1,17 @@
+services:
+  web:
+    image: nginx:alpine
+    volumes:
+      - .:/usr/share/nginx/html:ro
+    networks:
+      - proxy
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.jeanneandtom.rule=Host(`jeanneandtom.localhost`)"
+      - "traefik.http.routers.jeanneandtom.tls=true"
+      - "traefik.http.routers.jeanneandtom.entrypoints=websecure"
+      - "traefik.http.services.jeanneandtom.loadbalancer.server.port=80"
+
+networks:
+  proxy:
+    external: true

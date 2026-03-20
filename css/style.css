@@ -1,0 +1,152 @@
+/* Defaults */
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: 'Francois One', sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 4.375em;
+  top: 12px;
+}
+
+.page-header {
+  border: none;
+  margin-top: 18px;
+}
+
+.container {
+  max-width: 680px;
+}
+
+footer {
+  text-align: center;
+}
+
+article a {
+  font-weight: bold;
+  text-decoration: underline;
+  color: #333333;
+}
+article a:hover {
+  text-decoration: none;
+  color: #777777;
+}
+
+/* Header Menu */
+nav {
+  position: relative;
+  z-index: 1;
+}
+
+.navbar-nav {
+  background: none;
+  border: none;
+  font-family: 'Francois One', sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.navbar-nav > li {
+  float: none;
+  display: inline-block;
+}
+
+.navbar-nav > li > a {
+  border-bottom: 1px solid transparent;
+  color: #777777;
+}
+
+.navbar-nav > li > a:hover,
+.navbar-nav > li > a:focus {
+  background: none;
+  color: #a2d0ce;
+  border-bottom: 1px solid #777777;
+}
+
+/* Page Header */
+.site-header {
+  text-align: center;
+  margin-bottom: 18px;
+}
+.site-header .names {
+  font-family: 'Francois One', sans-serif;
+  top: -3px;
+  position: relative;
+}
+.site-header .names a {
+  color: #a2d0ce;
+}
+.site-header .names a:hover {
+  color: #333;
+  text-decoration: none;
+}
+.site-header .names .spouse {
+  font-size: 2.5em;
+  top: 5px;
+  position: relative;
+}
+.site-header .header-date {
+  color: #777777;
+}
+
+/* Front Page */
+.front-page {
+  text-align: center;
+}
+.front-page h1 {
+  position: relative;
+  top: -15px;
+  font-size: 1.75em;
+  font-family: 'Francois One', sans-serif;
+}
+.front-page h1 a {
+  color: #a2d0ce;
+}
+.front-page h1 a:hover {
+  color: #333;
+  text-decoration: none;
+}
+.front-page h1 .spouse {
+  text-transform: uppercase;
+  font-size: 2.5em;
+  position: relative;
+  top: 12px;
+  padding: 0 15px 15px;
+}
+.front-page .date {
+  color: #777777;
+  margin-bottom: 10px;
+}
+.front-page .location {
+  color: #777777;
+  margin-bottom: 25px;
+}
+.front-page .hero-image {
+  margin-bottom: 20px;
+}
+.front-page .hero-image img {
+  display: inline;
+}
+
+/* Ceremony page */
+.party p {
+  text-align: center;
+}
+
+/* Venue page */
+iframe.map {
+  filter: grayscale(100%);
+}
+
+/* Lodging page */
+.page-lodging h4 {
+  text-align: left;
+  margin-top: 20px;
+}

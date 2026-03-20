@@ -1,0 +1,15 @@
+# IDE
+.idea/
+
+# OpenTofu / Terraform
+infrastructure/.terraform/
+infrastructure/*.tfstate
+infrastructure/*.tfstate.backup
+infrastructure/.terraform.lock.hcl
+
+# macOS
+.DS_Store
+
+settings.local.json
+.env
+*.env
